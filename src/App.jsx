@@ -1,14 +1,12 @@
-import { Navbar } from "./components/NavBar/NavBar";
-import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
-import { CartWidget } from "./components/CartWidget/CartWidget";
+import { Container } from "@mui/material";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <CartWidget />
-      <ItemListContainer />
-    </div>
+    <>
+      <NavBar />
+      <Container sx={{ mt: 5 }}>asfsadf</Container>
+    </>
   );
 }
 
