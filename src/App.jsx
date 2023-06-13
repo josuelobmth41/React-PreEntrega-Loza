@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <Container sx={{ mt: 5 }}>asfsadf</Container>
+      <Container sx={{ mt: 5 }}>asdasd</Container>
     </>
   );
 }

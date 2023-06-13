@@ -12,7 +12,7 @@ import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import InboxIcon from "@mui/icons-material/Inbox";
 import DraftsIcon from "@mui/icons-material/Drafts";
-import HomeIcon from "@mui/icons-material";
+import HomeIcon from "@mui/icons-material/Home";
 
 const navLinks = [
   { title: "Inicio", path: "#", icon: <HomeIcon /> },
@@ -25,7 +25,7 @@ export default function NavBar() {
 
   return (
     <>
-      <AppBar sx={{ bgcolor: "gray" }}>
+      <AppBar sx={{ bgcolor: "primary" }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -39,17 +39,18 @@ export default function NavBar() {
             Canela Pet Shop
           </Typography>
 
-          <Box sx={{ display: { xs: "none", sm: "block" } }}></Box>
-          {navLinks.map((item) => (
-            <Button
-              color="inherit"
-              key={item.title}
-              component="a"
-              href={item.path}
-            >
-              {item.title}
-            </Button>
-          ))}
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            {navLinks.map((item) => (
+              <Button
+                color="inherit"
+                key={item.title}
+                component="a"
+                href={item.path}
+              >
+                {item.title}
+              </Button>
+            ))}
+          </Box>
         </Toolbar>
       </AppBar>
 
