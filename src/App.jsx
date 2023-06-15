@@ -1,11 +1,13 @@
 import { Container } from "@mui/material";
-import NavBar from "./components/NavBar/NavBar";
+import NavBar from "./components/layout/NavBar/NavBar";
+import ItemListContainer from "./components/pages/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
     <>
+      <Container sx={{ mt: 5 }}></Container>
       <NavBar />
-      <Container sx={{ mt: 5 }}>asdasd</Container>
+      <ItemListContainer />
     </>
   );
 }

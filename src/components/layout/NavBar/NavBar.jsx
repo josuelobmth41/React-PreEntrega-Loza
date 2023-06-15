@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import InboxIcon from "@mui/icons-material/Inbox";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import HomeIcon from "@mui/icons-material/Home";
+import { CartWidget } from "../../pages/CartWidget/CartWidget";
 
 const navLinks = [
   { title: "Inicio", path: "#", icon: <HomeIcon /> },
@@ -51,6 +52,7 @@ export default function NavBar() {
               </Button>
             ))}
           </Box>
+          <CartWidget />
         </Toolbar>
       </AppBar>
 
@@ -61,6 +63,7 @@ export default function NavBar() {
         sx={{ display: { xs: "flex", sm: "none" } }}
       >
         <NavListDrawer navLinks={navLinks} />
+        <CartWidget />
       </Drawer>
     </>
   );
