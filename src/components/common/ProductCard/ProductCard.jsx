@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 
-const ProductCard = (elemento) => {
+const ProductCard = ({ elemento }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -24,7 +24,7 @@ const ProductCard = (elemento) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Agregar al carrito</Button>
+        <Button size="small">Ver detalle</Button>
       </CardActions>
     </Card>
   );

@@ -1,9 +1,9 @@
 import ProductCard from "../../common/productCard/productCard";
+import "./ItemListContainer.css";
 
 const ItemListPresentacional = ({ items }) => {
   return (
-    <div>
-      <h1 style={{ marginTop: 100 }}>aca van los productos</h1>
+    <div className="cards-container">
       {items.map((elemento) => {
         return <ProductCard key={elemento} elemento={elemento} />;
       })}
