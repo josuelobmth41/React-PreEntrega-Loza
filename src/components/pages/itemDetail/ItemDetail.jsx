@@ -1,6 +1,13 @@
 import { ItemCount } from "../../ItemCount/ItemCount";
 
 const ItemDetail = ({ productSelect }) => {
+  const onAdd = (cantidad) => {
+    let data = {
+      ...productSelect,
+      quantity: cantidad,
+    };
+    console.log(data);
+  };
   return (
     <>
       <div>
@@ -9,7 +16,7 @@ const ItemDetail = ({ productSelect }) => {
         <br />
         <strong>{productSelect.price}</strong>
       </div>
-      <ItemCount stock={productSelect.stock} initial={1} />
+      <ItemCount stock={productSelect.stock} initial={1} onAdd={onAdd} />
     </>
   );
 };

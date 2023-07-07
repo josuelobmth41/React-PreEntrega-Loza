@@ -17,7 +17,7 @@ import { CartWidget } from "../../pages/CartWidget/CartWidget";
 import { Outlet } from "react-router-dom";
 
 const navLinks = [
-  { title: "Inicio", path: "#", icon: <HomeIcon /> },
+  { title: "Inicio", path: "/", icon: <HomeIcon /> },
   { title: "Productos", path: "#", icon: <InboxIcon /> },
   { title: "Contactos", path: "#", icon: <DraftsIcon /> },
 ];
