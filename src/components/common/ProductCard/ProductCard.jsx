@@ -25,7 +25,7 @@ const ProductCard = ({ elemento }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Link to="/ItemDetail">
+        <Link to={"/ItemDetail/" + elemento.id}>
           <Button size="small">Ver detalle</Button>
         </Link>
       </CardActions>
