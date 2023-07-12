@@ -10,9 +10,9 @@ const ItemDetail = ({ productSelect }) => {
   };
   return (
     <>
-      <div>
-        <h1>{productSelect.title}</h1>
+      <div style={{ marginTop: 50 }}>
         <img src={productSelect.img} alt="" />
+        <h1>{productSelect.title}</h1>
         <br />
         <strong>{productSelect.price}</strong>
       </div>

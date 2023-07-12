@@ -22,9 +22,9 @@ const navLinks = [
   { title: "Contactos", path: "#", icon: <DraftsIcon /> },
 ];
 
-export default function NavBar() {
+export default function NavBar({ children }) {
   const [open, setOpen] = useState(false);
-
+  console.log(children);
   return (
     <>
       <AppBar sx={{ bgcolor: "primary" }}>
@@ -67,6 +67,7 @@ export default function NavBar() {
         <CartWidget />
       </Drawer>
       <Outlet />
+      {children}
     </>
   );
 }
