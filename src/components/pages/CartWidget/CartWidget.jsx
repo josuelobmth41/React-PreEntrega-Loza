@@ -4,11 +4,9 @@ import { Link } from "react-router-dom";
 export const CartWidget = () => {
   return (
     <div>
-      <button>
-        <Link to="/Carrito">
-          <BsCart2 fontSize={"2rem"} /> 0
-        </Link>
-      </button>
+      <Link to="/Carrito">
+        <BsCart2 fontSize={"2rem"} /> 0
+      </Link>
     </div>
   );
 };

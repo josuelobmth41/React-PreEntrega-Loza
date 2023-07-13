@@ -14,17 +14,25 @@ import InboxIcon from "@mui/icons-material/Inbox";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import HomeIcon from "@mui/icons-material/Home";
 import { CartWidget } from "../../pages/CartWidget/CartWidget";
-import { Outlet } from "react-router-dom";
 
 const navLinks = [
   { title: "Inicio", path: "/", icon: <HomeIcon /> },
-  { title: "Productos", path: "#", icon: <InboxIcon /> },
+  {
+    title: "Accesorios",
+    path: "/category/Accesorios",
+    icon: <InboxIcon />,
+  },
+  {
+    title: "Alimento",
+    path: "/category/Alimento",
+    icon: <InboxIcon />,
+  },
   { title: "Contactos", path: "#", icon: <DraftsIcon /> },
 ];
 
-export default function NavBar({ children }) {
+export default function NavBar() {
   const [open, setOpen] = useState(false);
-  console.log(children);
+
   return (
     <>
       <AppBar sx={{ bgcolor: "primary" }}>
@@ -66,8 +74,6 @@ export default function NavBar({ children }) {
         <NavListDrawer navLinks={navLinks} />
         <CartWidget />
       </Drawer>
-      <Outlet />
-      {children}
     </>
   );
 }

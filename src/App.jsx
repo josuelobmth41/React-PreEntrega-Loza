@@ -1,22 +1,22 @@
 // import { Container } from "@mui/material";
 
-import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
-
-import NavBar from "./components/layout/NavBar/NavBar";
-import ItemListContainer from "./components/pages/ItemListContainer/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CartContainer from "./components/pages/CartWidget/CartContainer";
+import Layout from "./components/layout/layout";
+import { menuRoutes } from "./routes/menuRoutes";
+import CartContextProvider from "./context/CartContext";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route element={<NavBar />}>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/ItemDetail/:id" element={<ItemDetailContainer />} />
-          <Route path="/Carrito" element={<CartContainer />} />
-        </Route>
-      </Routes>
+      <CartContextProvider>
+        <Routes>
+          <Route element={<Layout />}>
+            {menuRoutes.map(({ id, path, Element }) => (
+              <Route key={id} path={path} element={<Element />} />
+            ))}
+          </Route>
+        </Routes>
+      </CartContextProvider>
     </BrowserRouter>
 
     // <>

@@ -1,12 +1,12 @@
 import { ItemCount } from "../../ItemCount/ItemCount";
 
-const ItemDetail = ({ productSelect }) => {
+const ItemDetail = ({ productSelect, agregarAlCarrito }) => {
   const onAdd = (cantidad) => {
     let data = {
       ...productSelect,
       quantity: cantidad,
     };
-    console.log(data);
+    agregarAlCarrito(data);
   };
   return (
     <>

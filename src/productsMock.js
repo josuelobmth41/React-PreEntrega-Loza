@@ -5,7 +5,7 @@ export const products = [
     price: 1500,
     stock: 3,
     description: "Para Perros/Gatos",
-    category: "Mascota",
+    category: "Accesorios",
     img: "https://res.cloudinary.com/dxs1ros9l/image/upload/v1686751424/correa-plana-elastica-con-amortiguacion-y-puno-small-100-centimetros_zq8aul.png",
   },
   {
@@ -14,7 +14,7 @@ export const products = [
     price: 2500,
     stock: 3,
     description: "Para Perros/Gatos",
-    category: "Mascota",
+    category: "Accesorios",
     img: "https://res.cloudinary.com/dxs1ros9l/image/upload/v1686751179/images_zkprdz.jpg",
   },
   {
@@ -23,7 +23,7 @@ export const products = [
     price: 500,
     stock: 2,
     description: "Para Perros/Gatos",
-    category: "Mascota",
+    category: "Accesorios",
     img: "https://res.cloudinary.com/dxs1ros9l/image/upload/v1686751315/images_e3z8t6.jpg",
   },
   {
@@ -32,7 +32,7 @@ export const products = [
     price: 8000,
     stock: 5,
     description: "Para Perros/Gatos",
-    category: "Mascota",
+    category: "Alimento",
     img: "https://res.cloudinary.com/dxs1ros9l/image/upload/v1686751537/D_NQ_NP_723674-MLA43036063262_082020-O_omajo8.webp",
   },
 ];
