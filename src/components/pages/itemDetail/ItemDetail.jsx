@@ -1,12 +1,20 @@
 import { ItemCount } from "../../ItemCount/ItemCount";
+import Swal from "sweetalert2";
 
-const ItemDetail = ({ productSelect, agregarAlCarrito }) => {
+const ItemDetail = ({ productSelect, agregarAlCarrito, cantidad }) => {
   const onAdd = (cantidad) => {
     let data = {
       ...productSelect,
       quantity: cantidad,
     };
     agregarAlCarrito(data);
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Producto agregado correctamente",
+      showConfirmButton: false,
+      timer: 1200,
+    });
   };
   return (
     <>
@@ -16,7 +24,15 @@ const ItemDetail = ({ productSelect, agregarAlCarrito }) => {
         <br />
         <strong>{productSelect.price}</strong>
       </div>
-      <ItemCount stock={productSelect.stock} initial={1} onAdd={onAdd} />
+      {productSelect.stock > 0 ? (
+        <ItemCount
+          stock={productSelect.stock}
+          initial={cantidad}
+          onAdd={onAdd}
+        />
+      ) : (
+        <h3>no hay stock</h3>
+      )}
     </>
   );
 };

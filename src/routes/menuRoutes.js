@@ -2,6 +2,7 @@ import ItemListContainer from "../components/pages/ItemListContainer/ItemListCon
 import ItemDetailContainer from "../components/pages/itemDetail/ItemDetailContainer";
 import CartContainer from "../components/pages/CartWidget/CartContainer";
 import Form from "../components/pages/Form/Form";
+import FormFormik from "../components/pages/formFormik/FormFormik";
 export const menuRoutes = [
   {
     id: "home",
@@ -27,5 +28,10 @@ export const menuRoutes = [
     id: "Form",
     path: "/Form",
     Element: Form,
+  },
+  {
+    id: "formik",
+    path: "/formik",
+    Element: FormFormik,
   },
 ];

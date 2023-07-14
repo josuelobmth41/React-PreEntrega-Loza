@@ -14,6 +14,7 @@ import InboxIcon from "@mui/icons-material/Inbox";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import HomeIcon from "@mui/icons-material/Home";
 import { CartWidget } from "../../pages/CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { title: "Inicio", path: "/", icon: <HomeIcon /> },
@@ -54,8 +55,8 @@ export default function NavBar() {
               <Button
                 color="inherit"
                 key={item.title}
-                component="a"
-                href={item.path}
+                component={Link}
+                to={item.path}
               >
                 {item.title}
               </Button>
