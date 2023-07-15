@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
+import { Button } from "@mui/material";
 
 const CartContainer = () => {
   const navigate = useNavigate();
@@ -32,22 +33,45 @@ const CartContainer = () => {
       }
     });
   };
+
   return (
-    <div style={{ marginTop: 100 }}>
-      <h2> total es : {total}</h2>
-      <button onClick={limpiar}>Limpiar Carrito</button>
+    <div style={{ marginLeft: 50, marginTop: 100 }}>
       <br />
       {cart.map((product) => {
         return (
           <div key={product.id}>
             <h1>{product.title}</h1>
-            <h2>{product.price}</h2>
-            <h2>{product.quantity}</h2>
-            <button onClick={() => removeById(product.id)}>eliminar</button>
+            <img src={product.img} alt="" />
+            <div>
+              <h2>$ {product.price}</h2>
+              <h2>Unidades : {product.quantity}</h2>
+            </div>
+            <Button variant="contained" onClick={() => removeById(product.id)}>
+              Eliminar
+            </Button>
           </div>
         );
       })}
-      <button onClick={realizarCompra}>Comprar</button>
+      <div
+        style={{
+          display: "flex",
+          marginLeft: 500,
+          alignItems: "center",
+          gap: 50,
+        }}
+      >
+        <h2> Total : $ {total}</h2>
+        <Link to="/checkout">
+          <Button variant="contained" onClick={realizarCompra}>
+            Finalizar Compra
+          </Button>
+        </Link>
+        {cart.length > 0 && (
+          <Button variant="contained" onClick={limpiar}>
+            Limpiar Carrito
+          </Button>
+        )}
+      </div>
     </div>
   );
 };

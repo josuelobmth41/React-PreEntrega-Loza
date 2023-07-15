@@ -1,7 +1,8 @@
 import { TextField, Button } from "@mui/material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-const FormFormik = () => {
+
+const CheckoutContainer = () => {
   const { handleSubmit, handleChange, errors } = useFormik({
     initialValues: {
       nombre: "",
@@ -26,7 +27,6 @@ const FormFormik = () => {
     }),
   });
   console.log(errors);
-
   return (
     <div style={{ marginTop: 100, padding: 50 }}>
       <form onSubmit={handleSubmit}>
@@ -73,4 +73,4 @@ const FormFormik = () => {
   );
 };
 
-export default FormFormik;
+export default CheckoutContainer;
